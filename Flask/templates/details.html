@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Crop Prediction</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon.PNG" rel="icon">
+  <link href="../static/img/apple-touch-icon.PNG" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+    <link href="../static/css/style.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+        background-image: url("../static/img/details.jpg");
+    }
+</style>
+ 
+  </style>
+  <!--  =======================================================
+  * Template Name: Day
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+ 
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="" href="/">Home</a></li>
+       
+          <li><a class="nav-link scrollto active" href="#portfolio">Prediction</a></li>
+        
+         </ul>
+   
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <div class="content">
+
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 mr-auto" style="color:rgb(6, 144, 190)">
+                  <br>
+                  <h3 class="mb-3" style="color:rgb(179, 58, 58);font-family:verdana;"><b>CROP PREDICTION SYSTEM</b></h3>
+              </div>
+
+              <div class="col-md-8">
+                  <div class="box">
+                      <h3 class="heading" style="color:rgb(18, 34, 38)">Please Fill the Details</h3>
+                 
+                      <form action="{{ url_for('predict')}}"method="post">
+                    
+                            <div class="form-group row">
+                            <div class="col-md-5">
+                                <label for="N" style="color:rgb(7, 140, 250)">NITROGEN</label>
+                                <input type="text" class="form-control" name="N" id="N" required="required" />
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <div class="col-md-5">
+                              <label for="P" style="color:rgb(7, 140, 250)">PHOSPHORUS</label>
+                              <input type="text" class="form-control" name="P" id="P" required="required" />
+                          </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="col-md-5">
+                            <label for="K" style="color:rgb(7, 140, 250)">POTASSIUM</label>
+                            <input type="text" class="form-control" name="K" id="K" required="required" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-md-5">
+                          <label for="temperature" style="color:rgb(7, 140, 250)">TEMPERATURE (in celcius)</label>
+                          <input type="text" class="form-control" min="0" max="100" name="temperature" id="temperature" required="required" />
+                      </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-md-5">
+                        <label for="humidity" style="color:rgb(7, 140, 250)">HUMIDITY (in %)</label>
+                        <input type="text" class="form-control" min="0" max="100" name="humidity" id="humidity" required="required" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-5">
+                      <label for="ph" style="color:rgb(7, 140, 250)">PH VALUE</label>
+                      <input type="text" class="form-control" min="0" max="14" name="ph" id="ph" required="required" />
+                  </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-5">
+                    <label for="rainfall" style="color:rgb(7, 140, 250)">RAINFALL (in mm)</label>
+                    <input type="text" class="form-control" min="0" name="rainfall" id="rainfall" required="required" />
+                </div>
+            </div>
+
+                          <br>
+                          <button type="submit" class="btn btn-success btn-lg" style="color:rgb(0,0,0)">PREDICT</button>
+                      </form>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+    <!-- ======= Breadcrumbs ======= -->
+   
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+        Designed by <a href="https://bootstrapmade.com/">Team Crops </a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
